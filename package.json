@@ -1,0 +1,39 @@
+{
+  "name": "dsh-google-classroom",
+  "version": "0.1.0",
+  "description": "Google Classroom MCP bundle for DeepSeek Harness: courses, coursework, due dates, announcements, rosters and submissions as mcp__google-classroom__* tools.",
+  "license": "MIT",
+  "type": "module",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "google-classroom",
+    "mcp"
+  ],
+  "exports": {
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "files": [
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "yaml": "^2.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praisethefacts/dsh-plugin-google-classroom.git"
+  }
+}

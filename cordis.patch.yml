@@ -1,0 +1,16 @@
+# The dsh-google-classroom bundle patch.
+# Inserts the already installed @deepseek-ai/dsh-mcp-client and starts the
+# google-classroom-mcp server over stdio. Its tools appear as
+# mcp__google-classroom__<tool>. failOnStartupError is left at its default
+# (false) so a slow first uvx download cannot reject the bundle.
+- insert:
+    - id: mcp-google-classroom
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: google-classroom
+        transport: stdio
+        command: uvx
+        args:
+          - --from
+          - git+https://github.com/praisethefacts/google-classroom-mcp@v0.1.0
+          - google-classroom-mcp
